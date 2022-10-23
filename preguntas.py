@@ -5,6 +5,7 @@ Regresión Lineal Univariada
 En este laboratio se construirá un modelo de regresión lineal univariado.
 
 """
+from tkinter import Y
 import numpy as np
 import pandas as pd
 
@@ -15,29 +16,29 @@ def pregunta_01():
     Complete el código presentado a continuación.
     """
     # Lea el archivo `gm_2008_region.csv` y asignelo al DataFrame `df`
-    df = ____
+    df = pd.read_csv("gm_2008_region.csv", sep= ",", thousands=None, decimal= ".") 
 
     # Asigne la columna "life" a `y` y la columna "fertility" a `X`
-    y = ____[____].____
-    X = ____[____].____
+    y = df['life'].array
+    x = df['fertility'].array
 
     # Imprima las dimensiones de `y`
-    print(____.____)
+    print(y.shape)
 
     # Imprima las dimensiones de `X`
-    print(____.____)
+    print(x.shape)
 
     # Transforme `y` a un array de numpy usando reshape
-    y_reshaped = y.reshape(____, ____)
+    y_reshaped = y.reshape(-1,1)
 
     # Trasforme `X` a un array de numpy usando reshape
-    X_reshaped = X.reshape(____, ____)
+    X_reshaped = X.reshape(-1,1)
 
     # Imprima las nuevas dimensiones de `y`
-    print(____.____)
+    print(y_reshaped.shape)
 
     # Imprima las nuevas dimensiones de `X`
-    print(____.____)
+    print(X_reshaped.shape)
 
 
 def pregunta_02():
@@ -47,22 +48,22 @@ def pregunta_02():
     """
 
     # Lea el archivo `gm_2008_region.csv` y asignelo al DataFrame `df`
-    df = ____
+    df = pd.read_csv("gm_2008_region.csv", sep= ",", thousands=None, decimal= ".")
 
     # Imprima las dimensiones del DataFrame
-    print(____.____)
+    print(df.shape)
 
     # Imprima la correlación entre las columnas `life` y `fertility` con 4 decimales.
-    print(____)
+    print("{:4f}".format(df['life'].corr(df['fertility'])))
 
     # Imprima la media de la columna `life` con 4 decimales.
-    print(____)
+    print("{:4f}".format(df['life'].mean()))
 
     # Imprima el tipo de dato de la columna `fertility`.
-    print(____)
+    print(type(df['fertility']))
 
     # Imprima la correlación entre las columnas `GDP` y `life` con 4 decimales.
-    print(____)
+    print("{:4f}".format(df['GDP'].corr(df['life'])))
 
 
 def pregunta_03():
@@ -72,13 +73,13 @@ def pregunta_03():
     """
 
     # Lea el archivo `gm_2008_region.csv` y asignelo al DataFrame `df`
-    df = ____
+    df = pd.read_csv("gm_2008_region.csv", sep= ",", thousands=None, decimal= ".") 
 
     # Asigne a la variable los valores de la columna `fertility`
-    X_fertility = ____
+    X_fertility = df['fertility']
 
     # Asigne a la variable los valores de la columna `life`
-    y_life = ____
+    y_life = df['life']
 
     # Importe LinearRegression
     from ____ import ____
