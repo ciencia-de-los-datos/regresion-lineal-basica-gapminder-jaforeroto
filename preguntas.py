@@ -32,13 +32,13 @@ def pregunta_01():
     y_reshaped = y.reshape(-1, 1)
 
     # Trasforme `X` a un array de numpy usando reshape
-    X_reshaped = y.reshape(-1, 1)
+    X_reshaped = x.reshape(-1, 1)
 
     # Imprima las nuevas dimensiones de `y`
     print(y_reshaped.shape)
 
     # Imprima las nuevas dimensiones de `X`
-    print(x_reshaped.shape)
+    print(X_reshaped.shape)
 
 
 def pregunta_02():
