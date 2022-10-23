@@ -20,25 +20,25 @@ def pregunta_01():
 
     # Asigne la columna "life" a `y` y la columna "fertility" a `X`
     y = df['life'].array
-    x = df['fertility'].array
+    X = df['fertility'].array
 
     # Imprima las dimensiones de `y`
     print(y.shape)
 
     # Imprima las dimensiones de `X`
-    print(x.shape)
+    print(X.shape)
 
     # Transforme `y` a un array de numpy usando reshape
     y_reshaped = y.reshape(-1,1)
 
     # Trasforme `X` a un array de numpy usando reshape
-    x_reshaped = x.reshape(-1,1)
+    X_reshaped = X.reshape(-1,1)
 
     # Imprima las nuevas dimensiones de `y`
     print(y_reshaped.shape)
 
     # Imprima las nuevas dimensiones de `X`
-    print(x_reshaped.shape)
+    print(X_reshaped.shape)
 
 
 def pregunta_02():
