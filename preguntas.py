@@ -77,6 +77,7 @@ def pregunta_03():
 
     # Asigne a la variable los valores de la columna `fertility`
     X_fertility = df['fertility'].array
+    X_fertility = X_fertility.reshape(-1, 1)
 
     # Asigne a la variable los valores de la columna `life`
     y_life = df['life'].array
@@ -111,15 +112,18 @@ def pregunta_04():
     """
 
     # Importe LinearRegression
+    from sklearn.linear_model import LinearRegression
     # Importe train_test_split
+    from sklearn.model_selection import train_test_split
     # Importe mean_squared_error
-    from ____ import ____
+    from sklearn.metrics import mean_squared_error
+
 
     # Lea el archivo `gm_2008_region.csv` y asignelo al DataFrame `df`
-    df = ____
+    df = pd.read_csv("gm_2008_region.csv", sep= ",", thousands=None, decimal= ".")
 
     # Asigne a la variable los valores de la columna `fertility`
-    X_fertility = ____
+    X_fertility = df['fertility'].array
 
     # Asigne a la variable los valores de la columna `life`
     y_life = ____
